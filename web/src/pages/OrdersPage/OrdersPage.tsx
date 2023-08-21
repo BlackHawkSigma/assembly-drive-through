@@ -7,7 +7,9 @@ const OrdersPage = () => {
     <>
       <MetaTags title="Orders" description="Orders page" />
 
-      <OrdersCell />
+      <div className="mx-auto md:w-96">
+        <OrdersCell />
+      </div>
     </>
   )
 }
