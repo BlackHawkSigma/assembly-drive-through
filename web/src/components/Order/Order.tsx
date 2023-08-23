@@ -29,6 +29,7 @@ const Order = ({ order }: OrderProps) => {
     CompleteOrderMutationVariables
   >(COMPLETE_ORDER, {
     variables: { id: order.id },
+    refetchQueries: ['OrdersQuery'],
     onCompleted(data) {
       toast.success(`Anforderung Nr. ${data.completeOrder.id} abgeschloßen`)
     },
