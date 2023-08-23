@@ -20,8 +20,6 @@ export const QUERY = gql`
         name
       }
       createdAt
-      updatedAt
-      fulfilledAt
     }
   }
 `

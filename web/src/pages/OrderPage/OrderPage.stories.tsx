@@ -4,6 +4,9 @@ import OrderPage from './OrderPage'
 
 const meta: Meta<typeof OrderPage> = {
   component: OrderPage,
+  args: {
+    id: 42,
+  },
 }
 
 export default meta

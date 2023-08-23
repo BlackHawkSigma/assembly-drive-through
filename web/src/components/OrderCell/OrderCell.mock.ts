@@ -4,9 +4,9 @@ export const standard = (/* vars, { ctx, req } */) => ({
     item: {
       id: '123456789',
       name: 'TestItem',
-    },
-    pickupLocation: {
-      name: 'Test Lager',
+      pickupLocation: {
+        name: 'Test Lager',
+      },
     },
     deliverLocation: {
       name: 'Test Montage',
