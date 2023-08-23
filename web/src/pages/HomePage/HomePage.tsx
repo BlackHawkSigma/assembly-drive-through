@@ -1,19 +1,21 @@
-import { Link, routes } from '@redwoodjs/router'
+import { routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+
+import Link from 'src/components/Link/Link'
 
 const HomePage = () => {
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
-
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
+      <MetaTags title="Home" description="Startseite" />
+      <div className="px-4">
+        <h1 className="mb-4 py-2 text-center text-4xl">Startseite</h1>
+        <div className="flex flex-col justify-center gap-4 md:flex-row">
+          <Link to={routes.newOrder()}>neuer Auftrag</Link>
+          <Link to={routes.orders()}>Auftrags Liste</Link>
+          <Link to={routes.items()}>Artikel Liste</Link>
+          {/* <Link to={routes.detection()}>Detection</Link> */}
+        </div>
+      </div>
     </>
   )
 }
