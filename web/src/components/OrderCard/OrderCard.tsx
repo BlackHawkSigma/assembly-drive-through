@@ -15,7 +15,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
         <p>{order.id}</p>
       </div>
       <div className="flex justify-around text-2xl">
-        <p>{order.pickupLocation.name}</p>
+        <p>{order.item.pickupLocation.name}</p>
         <span> ={'>'} </span>
         <p>{order.deliverLocation.name}</p>
       </div>

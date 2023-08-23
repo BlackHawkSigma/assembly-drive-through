@@ -14,6 +14,9 @@ const CREATE_ORDER = gql`
   mutation CreateOrderMutation($input: CreateOrderInput!) {
     createOrder(input: $input) {
       id
+      item {
+        name
+      }
     }
   }
 `
@@ -24,7 +27,7 @@ const NewOrderPage = () => {
     CreateOrderMutationVariables
   >(CREATE_ORDER, {
     onCompleted(data) {
-      toast.success(`Anforderung Nr. ${data.createOrder.id} erstellt`)
+      toast.success(`Anforderung für ${data.createOrder.item.name} erstellt`)
       navigate(routes.orders())
     },
   })
@@ -32,7 +35,6 @@ const NewOrderPage = () => {
   const handleSubmit = (data) => {
     const input: CreateOrderInput = {
       deliverLocationId: 1,
-      pickupLocationId: 1,
       itemId: data.code,
     }
 

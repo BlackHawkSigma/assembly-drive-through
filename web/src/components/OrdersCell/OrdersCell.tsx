@@ -12,9 +12,9 @@ export const QUERY = gql`
       item {
         id
         name
-      }
-      pickupLocation {
-        name
+        pickupLocation {
+          name
+        }
       }
       deliverLocation {
         name
