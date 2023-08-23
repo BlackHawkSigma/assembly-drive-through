@@ -4,7 +4,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       id: 42,
       item: {
         name: 'Test Item',
-        code: '123456789',
+        id: '123456789',
       },
       pickupLocation: {
         name: 'Test Lager',
@@ -20,7 +20,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       id: 43,
       item: {
         name: 'Other Test Item',
-        code: '987654321',
+        id: '987654321',
       },
       pickupLocation: {
         name: 'Test Lager',
@@ -36,7 +36,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       id: 44,
       item: {
         name: 'Another Test Item',
-        code: '112911911',
+        id: '112911911',
       },
       pickupLocation: {
         name: 'Test Lager',

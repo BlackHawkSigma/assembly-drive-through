@@ -10,7 +10,7 @@ export const QUERY = gql`
     orders {
       id
       item {
-        code
+        id
         name
       }
       pickupLocation {
@@ -26,6 +26,10 @@ export const QUERY = gql`
   }
 `
 
+export const beforeQuery = (props) => {
+  return { variables: props, pollInterval: 5_000 }
+}
+
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>
@@ -40,32 +44,4 @@ export const Success = ({ orders }: CellSuccessProps<OrdersQuery>) => {
       <OrderCard order={order} />
     </Link>
   ))
-  // <table className="w-full">
-  //   <thead>
-  //     <tr>
-  //       <th>ID</th>
-  //       <th>code</th>
-  //       <th>name</th>
-  //       <th>von</th>
-  //       <th>nach</th>
-  //     </tr>
-  //   </thead>
-  //   <tbody>
-  //     {orders.map((order) => {
-  //       return (
-  //         <tr key={order.id}>
-  //           <td>{order.id}</td>
-  //           <td>{order.item.code}</td>
-  //           <td>
-  //             <Link to={routes.order({ id: order.id })}>
-  //               {order.item.name}
-  //             </Link>
-  //           </td>
-  //           <td>{order.pickupLocation.name}</td>
-  //           <td>{order.deliverLocation.name}</td>
-  //         </tr>
-  //       )
-  //     })}
-  //   </tbody>
-  // </table>
 }

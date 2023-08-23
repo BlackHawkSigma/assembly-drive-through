@@ -1,24 +1,15 @@
-type OrderCardProps = {
-  order: {
-    id: number
-    item: {
-      code: string
-      name: string
-    }
-    pickupLocation: { name: string }
-    deliverLocation: { name: string }
-    createdAt: string
-    updatedAt: string
-    fulfilledAt?: Maybe<string>
-  }
-}
+import { FindOrderQuery, FindOrderQueryVariables } from 'types/graphql'
+
+import { CellSuccessProps } from '@redwoodjs/web'
+
+type OrderCardProps = CellSuccessProps<FindOrderQuery, FindOrderQueryVariables>
 
 const OrderCard = ({ order }: OrderCardProps) => {
   return (
     <div className="m-2 rounded border p-1 shadow">
       <div className="flex justify-between">
         <div>
-          <p className="text-2xl">{order.item.code}</p>
+          <p className="text-2xl">{order.item.id}</p>
           <p className="text-center text-3xl">{order.item.name}</p>
         </div>
         <p>{order.id}</p>
