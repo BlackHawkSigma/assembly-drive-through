@@ -1,15 +1,15 @@
 import type { FindOrderQuery, FindOrderQueryVariables } from 'types/graphql'
 
-import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
 
-import OrderCard from '../OrderCard/OrderCard'
+import Order from '../Order/Order'
 
 export const QUERY = gql`
   query FindOrderQuery($id: Int!) {
     order: order(id: $id) {
       id
       item {
-        code
+        id
         name
       }
       pickupLocation {
@@ -38,5 +38,5 @@ export const Failure = ({
 export const Success = ({
   order,
 }: CellSuccessProps<FindOrderQuery, FindOrderQueryVariables>) => {
-  return <OrderCard order={order} />
+  return <Order order={order} />
 }

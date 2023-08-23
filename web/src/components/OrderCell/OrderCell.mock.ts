@@ -2,7 +2,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
   order: {
     id: 42,
     item: {
-      code: '123456789',
+      id: '123456789',
       name: 'TestItem',
     },
     pickupLocation: {

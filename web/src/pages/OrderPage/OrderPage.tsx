@@ -9,9 +9,7 @@ type OrderPageProps = {
 const OrderPage = ({ id }: OrderPageProps) => {
   return (
     <>
-      <MetaTags title="Order" description="Order page" />
-
-      <h1>OrderPage</h1>
+      <MetaTags title={`Auftrag Nr. ${id}`} description="Order page" />
 
       <OrderCell id={id} />
     </>
