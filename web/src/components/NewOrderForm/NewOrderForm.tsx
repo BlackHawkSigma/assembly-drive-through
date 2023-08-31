@@ -1,5 +1,3 @@
-import { useEffect, useRef } from 'react'
-
 import {
   Label,
   Form,
@@ -20,16 +18,6 @@ type NewOrderFormProps = {
 type FormValues = { code: string }
 
 const NewOrderForm = ({ onSubmit, loading, error }: NewOrderFormProps) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      inputRef.current.focus()
-    }, 0)
-
-    return () => clearTimeout(timeout)
-  }, [])
-
   return (
     <Form onSubmit={onSubmit} config={{ mode: 'onBlur' }} error={error}>
       <FormError error={error} wrapperClassName="text-red-600" />
@@ -44,9 +32,6 @@ const NewOrderForm = ({ onSubmit, loading, error }: NewOrderFormProps) => {
           required
           className="my-2 w-full rounded"
           autoComplete="off"
-          // eslint-disable-next-line jsx-a11y/no-autofocus
-          autoFocus
-          ref={inputRef}
         />
         <FieldError name="code" />
       </div>

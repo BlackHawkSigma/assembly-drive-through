@@ -1,6 +1,15 @@
-import type { ItemsQuery } from 'types/graphql'
+import type {
+  CreateOrderQuickMutation,
+  CreateOrderQuickMutationVariables,
+  ItemsQuery,
+} from 'types/graphql'
 
-import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
+import {
+  type CellSuccessProps,
+  type CellFailureProps,
+  useMutation,
+} from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/dist/toast'
 
 import Barcode from 'src/components/Barcode/Barcode'
 
@@ -16,6 +25,17 @@ export const QUERY = gql`
   }
 `
 
+const CREATE_ORDER = gql`
+  mutation CreateOrderQuickMutation($input: CreateOrderInput!) {
+    createOrder(input: $input) {
+      id
+      item {
+        name
+      }
+    }
+  }
+`
+
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>
@@ -25,6 +45,19 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ items }: CellSuccessProps<ItemsQuery>) => {
+  const [order] = useMutation<
+    CreateOrderQuickMutation,
+    CreateOrderQuickMutationVariables
+  >(CREATE_ORDER, {
+    onCompleted(data) {
+      toast.success(`Anforderung für ${data.createOrder.item.name} erstellt`)
+    },
+  })
+
+  const onOrder = (id: string) => {
+    order({ variables: { input: { itemId: id, deliverLocationId: 1 } } })
+  }
+
   return (
     <div className="flex flex-col p-4">
       {items.map((item) => {
@@ -38,7 +71,9 @@ export const Success = ({ items }: CellSuccessProps<ItemsQuery>) => {
               Abholort: {item.pickupLocation.name}
             </p>
 
-            <Barcode payload={item.id} />
+            <button onClick={() => onOrder(item.id)}>
+              <Barcode payload={item.id} />
+            </button>
           </div>
         )
       })}

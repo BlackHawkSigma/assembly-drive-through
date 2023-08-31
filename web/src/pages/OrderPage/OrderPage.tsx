@@ -3,7 +3,7 @@ import { MetaTags } from '@redwoodjs/web'
 import OrderCell from 'src/components/OrderCell'
 
 type OrderPageProps = {
-  id: number
+  id: unknown
 }
 
 const OrderPage = ({ id }: OrderPageProps) => {
@@ -11,7 +11,7 @@ const OrderPage = ({ id }: OrderPageProps) => {
     <>
       <MetaTags title={`Auftrag Nr. ${id}`} description="Order page" />
 
-      <OrderCell id={id} />
+      {typeof id === 'number' ? <OrderCell id={id} /> : null}
     </>
   )
 }

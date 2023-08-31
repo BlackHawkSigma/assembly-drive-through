@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.0.0",
+  "version": "0.3.0",
   "private": true,
   "browserslist": {
     "development": [
@@ -17,7 +17,10 @@
     "jsbarcode": "^3.11.5",
     "prop-types": "15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-qr-barcode-scanner": "^1.0.6",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
     "@redwoodjs/vite": "6.1.0",

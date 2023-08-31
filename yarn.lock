@@ -7628,6 +7628,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^16.9.35":
+  version: 16.14.46
+  resolution: "@types/react@npm:16.14.46"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 815885cbae2c8653dddf8df4e6c2ce43ff8ff1d02c03f8356ce4b13aa7c8e6c72c588f04977c6f49fdd82419d46fdd895535d5e66726f0b0ea13c04065294995
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/responselike@npm:1.0.0"
@@ -8447,7 +8458,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zxing/text-encoding@npm:0.9.0":
+"@zxing/library@npm:^0.17.0":
+  version: 0.17.1
+  resolution: "@zxing/library@npm:0.17.1"
+  dependencies:
+    "@zxing/text-encoding": ~0.9.0
+    ts-custom-error: ^3.0.0
+  dependenciesMeta:
+    "@zxing/text-encoding":
+      optional: true
+  checksum: fbeb9786a87c48f93e7dc2b8bdb114720cc7a3cf450c7f7c38a32e9a59521edfae54d82b4e7ec43ba0bc30f065b5be0a0fd5acd922fac2288e8a358e3a6745b9
+  languageName: node
+  linkType: hard
+
+"@zxing/text-encoding@npm:0.9.0, @zxing/text-encoding@npm:~0.9.0":
   version: 0.9.0
   resolution: "@zxing/text-encoding@npm:0.9.0"
   checksum: d15bff181d46c2ab709e7242801a8d40408aa8c19b44462e5f60e766bf59105b44957914ab6baab60d10d466a5e965f21fe890c67dfdb7d5c7f940df457b4d0d
@@ -20549,6 +20573,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "react-icons@npm:4.10.1"
+  peerDependencies:
+    react: "*"
+  checksum: aa4ecd390751bf61fc7967c2256eace1351c4af9a941ea4459464ac5cae012fe99970430ab659ad38a633ca55b0392d9ea5624ab3953c0bc86e1809199d6e2e2
+  languageName: node
+  linkType: hard
+
 "react-inspector@npm:^6.0.0":
   version: 6.0.2
   resolution: "react-inspector@npm:6.0.2"
@@ -20583,6 +20616,20 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: 6eb5e4b28028c23e2bfcf73371e72cd4162e4ac7ab445ddae2afe24e347a37d6dc22fae6e1748632cd43c6d4f9b8f86dcf26bf9275e1874f436d129952528ae0
+  languageName: node
+  linkType: hard
+
+"react-qr-barcode-scanner@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "react-qr-barcode-scanner@npm:1.0.6"
+  dependencies:
+    "@types/react": ^16.9.35
+    "@zxing/library": ^0.17.0
+    react-webcam: ^5.0.1
+  peerDependencies:
+    react: ^16.13.1
+    react-dom: ^16.13.1
+  checksum: de7d766c02604c5760dad731bd52a031e138a260ec78f83986f1c11480132c45c235c9beab3b7fca21b3703da8087396e71313519d721df2c1b29b70295a894f
   languageName: node
   linkType: hard
 
@@ -20661,6 +20708,16 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 6d66f3bdb65e1ec79089f80314da97c9a005087a04ee034255a5de129a4c0d9fd0bf99fa7bf642781ac2dc745ca687aae3de082bd8afdd0d117bc953241e15ad
+  languageName: node
+  linkType: hard
+
+"react-webcam@npm:^5.0.1":
+  version: 5.2.4
+  resolution: "react-webcam@npm:5.2.4"
+  peerDependencies:
+    react: ">=15.3.0"
+    react-dom: ">=15.3.0"
+  checksum: d99eda4859a37d00fb3b01435c96c592e980b1f8a6ddb9fc04ee676f2580df54d9ce6c02d16f0092a1277c2fc7fbe37be214ac9cb6589aeda41c1ba32d29517f
   languageName: node
   linkType: hard
 
@@ -23193,6 +23250,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-custom-error@npm:^3.0.0":
+  version: 3.3.1
+  resolution: "ts-custom-error@npm:3.3.1"
+  checksum: 67cc807d03406d7eeb2b908408d455d253cc43b480d669e2e3ea028b9aaa2c78ad1b392425b86368bbbc3c43a15e4abe304312d87ed845091646ec1937bab982
+  languageName: node
+  linkType: hard
+
 "ts-dedent@npm:^2.0.0":
   version: 2.2.0
   resolution: "ts-dedent@npm:2.2.0"
@@ -23909,6 +23973,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"usehooks-ts@npm:^2.9.1":
+  version: 2.9.1
+  resolution: "usehooks-ts@npm:2.9.1"
+  peerDependencies:
+    react: ^16.8.0  || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+  checksum: 14f6bc3661cebe19714dc2bc0413b56c53fcb44fada2258756c2fefc10cf6481299bd8d4ba659af3bc5692a57d5da3c3e14b75d69177eccd3ac8326c5336e756
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -24228,7 +24302,10 @@ __metadata:
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
+    react-icons: ^4.10.1
+    react-qr-barcode-scanner: ^1.0.6
     tailwindcss: 3.3.3
+    usehooks-ts: ^2.9.1
   languageName: unknown
   linkType: soft
 

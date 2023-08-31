@@ -20,6 +20,7 @@ export const QUERY = gql`
         name
       }
       createdAt
+      claimedAt
     }
   }
 `
@@ -37,9 +38,13 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ orders }: CellSuccessProps<OrdersQuery>) => {
-  return orders.map((order) => (
-    <Link to={routes.order({ id: order.id })} key={order.id}>
-      <OrderCard order={order} />
-    </Link>
-  ))
+  return (
+    <div className="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-3 xl:px-8 2xl:grid-cols-4">
+      {orders.map((order) => (
+        <Link to={routes.order({ id: order.id })} key={order.id}>
+          <OrderCard order={order} />
+        </Link>
+      ))}
+    </div>
+  )
 }
