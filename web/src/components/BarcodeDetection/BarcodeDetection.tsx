@@ -28,9 +28,6 @@ const BarcodeDetection = ({ onScan }: BarcodeDetectionProps) => {
   useEffect(() => {
     const getDevices = async () => {
       const devices = await navigator.mediaDevices.enumerateDevices()
-      const constrains = await navigator.mediaDevices.getSupportedConstraints()
-      console.log({ constrains })
-
       const cameras = devices.filter((device) => device.kind === 'videoinput')
 
       return cameras
