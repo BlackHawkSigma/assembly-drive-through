@@ -1,10 +1,10 @@
+import type { CreatePickupLocationInput } from 'types/graphql'
+
 import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import PickupLocationForm from 'src/components/Admin/PickupLocation/PickupLocationForm'
-
-import type { CreatePickupLocationInput } from 'types/graphql'
 
 const CREATE_PICKUP_LOCATION_MUTATION = gql`
   mutation CreatePickupLocationMutation($input: CreatePickupLocationInput!) {
