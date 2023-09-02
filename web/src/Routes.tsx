@@ -9,11 +9,19 @@
 
 import { Route, Router, Set } from '@redwoodjs/router'
 
+import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
+
 import MainLayout from './layouts/MainLayout/MainLayout'
 
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={ScaffoldLayout} title="PickupLocations" titleTo="adminPickupLocations" buttonLabel="New PickupLocation" buttonTo="adminNewPickupLocation">
+        <Route path="/admin/pickup-locations/new" page={AdminPickupLocationNewPickupLocationPage} name="adminNewPickupLocation" />
+        <Route path="/admin/pickup-locations/{id:Int}/edit" page={AdminPickupLocationEditPickupLocationPage} name="adminEditPickupLocation" />
+        <Route path="/admin/pickup-locations/{id:Int}" page={AdminPickupLocationPickupLocationPage} name="adminPickupLocation" />
+        <Route path="/admin/pickup-locations" page={AdminPickupLocationPickupLocationsPage} name="adminPickupLocations" />
+      </Set>
       <Set wrap={MainLayout}>
         <Route path="/locations" page={LocationsPage} name="locations" />
         <Route path="/location/{id:Int}/orders" page={LocationOrdersPage} name="locationOrders" />

@@ -18,6 +18,10 @@ const HomePage = () => {
           <Link to={routes.locations()}>Abholorte</Link>
 
           <Link to={routes.items()}>Artikel Liste</Link>
+
+          <div className="flex gap-4">
+            <Link to={routes.adminPickupLocations()}>Admin/Abholorte</Link>
+          </div>
         </div>
       </div>
     </>

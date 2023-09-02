@@ -24296,6 +24296,7 @@ __metadata:
     "@tailwindcss/forms": ^0.5.4
     autoprefixer: 10.4.15
     canvas: ^2.11.2
+    humanize-string: 2.1.0
     jsbarcode: ^3.11.5
     postcss: 8.4.28
     postcss-loader: 7.3.3
