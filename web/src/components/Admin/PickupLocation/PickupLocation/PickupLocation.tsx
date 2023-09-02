@@ -1,13 +1,11 @@
-import { Link, routes, navigate } from '@redwoodjs/router'
-import { useMutation } from '@redwoodjs/web'
-import { toast } from '@redwoodjs/web/toast'
-
-import {} from 'src/lib/formatters'
-
 import type {
   DeletePickupLocationMutationVariables,
   FindPickupLocationById,
 } from 'types/graphql'
+
+import { Link, routes, navigate } from '@redwoodjs/router'
+import { useMutation } from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/toast'
 
 const DELETE_PICKUP_LOCATION_MUTATION = gql`
   mutation DeletePickupLocationMutation($id: Int!) {
@@ -32,6 +30,7 @@ const PickupLocation = ({ pickupLocation }: Props) => {
     },
   })
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onDeleteClick = (id: DeletePickupLocationMutationVariables['id']) => {
     if (confirm('Are you sure you want to delete pickupLocation ' + id + '?')) {
       deletePickupLocation({ variables: { id } })
@@ -66,13 +65,13 @@ const PickupLocation = ({ pickupLocation }: Props) => {
         >
           Edit
         </Link>
-        <button
+        {/* <button
           type="button"
           className="rw-button rw-button-red"
           onClick={() => onDeleteClick(pickupLocation.id)}
         >
           Delete
-        </button>
+        </button> */}
       </nav>
     </>
   )

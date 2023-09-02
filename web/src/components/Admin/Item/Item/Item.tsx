@@ -27,6 +27,7 @@ const Item = ({ item }: Props) => {
     },
   })
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onDeleteClick = (id: DeleteItemMutationVariables['id']) => {
     if (confirm('Are you sure you want to delete item ' + id + '?')) {
       deleteItem({ variables: { id } })
@@ -65,13 +66,13 @@ const Item = ({ item }: Props) => {
         >
           Edit
         </Link>
-        <button
+        {/* <button
           type="button"
           className="rw-button rw-button-red"
           onClick={() => onDeleteClick(item.id)}
         >
           Delete
-        </button>
+        </button> */}
       </nav>
     </>
   )
