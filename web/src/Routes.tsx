@@ -11,17 +11,27 @@ import { Route, Router, Set } from '@redwoodjs/router'
 
 import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 
+import AdminLayout from './layouts/AdminLayout/AdminLayout'
 import MainLayout from './layouts/MainLayout/MainLayout'
 
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={ScaffoldLayout} title="PickupLocations" titleTo="adminPickupLocations" buttonLabel="New PickupLocation" buttonTo="adminNewPickupLocation">
-        <Route path="/admin/pickup-locations/new" page={AdminPickupLocationNewPickupLocationPage} name="adminNewPickupLocation" />
-        <Route path="/admin/pickup-locations/{id:Int}/edit" page={AdminPickupLocationEditPickupLocationPage} name="adminEditPickupLocation" />
-        <Route path="/admin/pickup-locations/{id:Int}" page={AdminPickupLocationPickupLocationPage} name="adminPickupLocation" />
-        <Route path="/admin/pickup-locations" page={AdminPickupLocationPickupLocationsPage} name="adminPickupLocations" />
+      <Set wrap={AdminLayout}>
+        <Set wrap={ScaffoldLayout} title="Items" titleTo="adminItems" buttonLabel="New Item" buttonTo="adminNewItem">
+          <Route path="/admin/items/new" page={AdminItemNewItemPage} name="adminNewItem" />
+          <Route path="/admin/items/{id}/edit" page={AdminItemEditItemPage} name="adminEditItem" />
+          <Route path="/admin/items/{id}" page={AdminItemItemPage} name="adminItem" />
+          <Route path="/admin/items" page={AdminItemItemsPage} name="adminItems" />
+        </Set>
+        <Set wrap={ScaffoldLayout} title="PickupLocations" titleTo="adminPickupLocations" buttonLabel="New PickupLocation" buttonTo="adminNewPickupLocation">
+          <Route path="/admin/pickup-locations/new" page={AdminPickupLocationNewPickupLocationPage} name="adminNewPickupLocation" />
+          <Route path="/admin/pickup-locations/{id:Int}/edit" page={AdminPickupLocationEditPickupLocationPage} name="adminEditPickupLocation" />
+          <Route path="/admin/pickup-locations/{id:Int}" page={AdminPickupLocationPickupLocationPage} name="adminPickupLocation" />
+          <Route path="/admin/pickup-locations" page={AdminPickupLocationPickupLocationsPage} name="adminPickupLocations" />
+        </Set>
       </Set>
+
       <Set wrap={MainLayout}>
         <Route path="/locations" page={LocationsPage} name="locations" />
         <Route path="/location/{id:Int}/orders" page={LocationOrdersPage} name="locationOrders" />

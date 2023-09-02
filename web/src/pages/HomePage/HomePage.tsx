@@ -19,8 +19,9 @@ const HomePage = () => {
 
           <Link to={routes.items()}>Artikel Liste</Link>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link to={routes.adminPickupLocations()}>Admin/Abholorte</Link>
+            <Link to={routes.adminItems()}>Admin/Items</Link>
           </div>
         </div>
       </div>
