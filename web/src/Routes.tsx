@@ -34,6 +34,7 @@ const Routes = () => {
       </Set>
 
       <Set wrap={MainLayout}>
+        <Route path="/user-name" page={UserNamePage} name="userName" />
         <Route path="/locations" page={LocationsPage} name="locations" />
         <Route path="/location/{id:Int}/orders" page={LocationOrdersPage} name="locationOrders" />
         <Route path="/items" page={ItemsPage} name="items" />

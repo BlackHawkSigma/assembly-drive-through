@@ -58,10 +58,10 @@ export const deleteOrder: MutationResolvers['deleteOrder'] = ({ id }) => {
   })
 }
 
-export const claimOrder: MutationResolvers['completeOrder'] = ({ id }) => {
+export const claimOrder: MutationResolvers['claimOrder'] = ({ id, input }) => {
   return db.order.update({
     where: { id },
-    data: { claimedAt: new Date() },
+    data: { claimedAt: new Date(), ...input },
   })
 }
 

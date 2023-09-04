@@ -22,6 +22,10 @@ export const schema = gql`
     itemId: String!
   }
 
+  input ClaimOrderInput {
+    claimedBy: String!
+  }
+
   input UpdateOrderInput {
     deliverLocationId: Int
     itemId: String
@@ -31,7 +35,7 @@ export const schema = gql`
     createOrder(input: CreateOrderInput!): Order! @requireAuth
     updateOrder(id: Int!, input: UpdateOrderInput!): Order! @requireAuth
     deleteOrder(id: Int!): Order! @requireAuth
-    claimOrder(id: Int!): Order! @requireAuth
+    claimOrder(id: Int!, input: ClaimOrderInput!): Order! @requireAuth
     completeOrder(id: Int!): Order! @requireAuth
   }
 `

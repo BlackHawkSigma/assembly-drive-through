@@ -6,6 +6,7 @@ import {
   FindOrderQuery,
   FindOrderQueryVariables,
 } from 'types/graphql'
+import { useReadLocalStorage } from 'usehooks-ts'
 
 import { back } from '@redwoodjs/router'
 import { CellSuccessProps, useMutation } from '@redwoodjs/web'
@@ -16,8 +17,8 @@ import Button from 'src/components/Button/Button'
 import OrderCard from 'src/components/OrderCard/OrderCard'
 
 const CLAIM_ORDER = gql`
-  mutation ClaimOrderMutation($id: Int!) {
-    claimOrder(id: $id) {
+  mutation ClaimOrderMutation($id: Int!, $input: ClaimOrderInput!) {
+    claimOrder(id: $id, input: $input) {
       id
       claimedAt
     }
@@ -36,6 +37,8 @@ const COMPLETE_ORDER = gql`
 type OrderProps = CellSuccessProps<FindOrderQuery, FindOrderQueryVariables>
 
 const Order = ({ order }: OrderProps) => {
+  const userName = useReadLocalStorage<string>('user-name')
+
   const [complete, { loading: completeLoadig }] = useMutation<
     CompleteOrderMutation,
     CompleteOrderMutationVariables
@@ -53,7 +56,7 @@ const Order = ({ order }: OrderProps) => {
     ClaimOrderMutation,
     ClaimOrderMutationVariables
   >(CLAIM_ORDER, {
-    variables: { id: order.id },
+    variables: { id: order.id, input: { claimedBy: userName } },
     refetchQueries: ['OrdersQuery'],
     awaitRefetchQueries: true,
     onCompleted(data) {

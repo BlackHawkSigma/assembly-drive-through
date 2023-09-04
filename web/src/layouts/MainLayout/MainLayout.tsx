@@ -1,3 +1,5 @@
+import { useLocalStorage } from 'usehooks-ts'
+
 import { Link, NavLink, routes } from '@redwoodjs/router'
 import { Toaster } from '@redwoodjs/web/toast'
 
@@ -6,6 +8,8 @@ type MainLayoutProps = {
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
+  const [userName] = useLocalStorage('user-name', 'unbekannt')
+
   return (
     <>
       <Toaster />
@@ -13,6 +17,13 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <div className="grow">
           <Link className="text-2xl md:text-lg" to={routes.home()}>
             Home
+          </Link>
+        </div>
+
+        <div className="flex-grow">
+          Hallo, {userName} {''}
+          <Link className="text-sm underline" to={routes.userName()}>
+            (ändern)
           </Link>
         </div>
 
