@@ -7,12 +7,19 @@ export const standard = defineScenario<Prisma.OrderCreateArgs>({
     one: {
       data: {
         updatedAt: '2023-08-18T18:16:11.610Z',
-        deliverLocation: { create: { name: 'String' } },
+        deliverLocation: {
+          connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
+        },
         item: {
           create: {
             id: 'String1',
             name: 'Item 1',
-            pickupLocation: { create: { name: 'Spritzguss' } },
+            pickupLocation: {
+              connectOrCreate: {
+                create: { name: 'Spritzguss' },
+                where: { id: 1 },
+              },
+            },
           },
         },
       },
@@ -20,12 +27,19 @@ export const standard = defineScenario<Prisma.OrderCreateArgs>({
     two: {
       data: {
         updatedAt: '2023-08-18T18:16:11.610Z',
-        deliverLocation: { create: { name: 'String' } },
+        deliverLocation: {
+          connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
+        },
         item: {
           create: {
             id: 'String2',
             name: 'Item 2',
-            pickupLocationId: 1,
+            pickupLocation: {
+              connectOrCreate: {
+                create: { name: 'Spritzguss' },
+                where: { id: 1 },
+              },
+            },
           },
         },
       },

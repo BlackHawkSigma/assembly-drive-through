@@ -41,10 +41,8 @@ const Order = ({ order }: OrderProps) => {
     CompleteOrderMutationVariables
   >(COMPLETE_ORDER, {
     variables: { id: order.id },
-    // refetchQueries: ['OrdersQuery'],
-    onQueryUpdated(query) {
-      query.refetch()
-    },
+    refetchQueries: ['OrdersQuery'],
+    awaitRefetchQueries: true,
     onCompleted(data) {
       toast.success(`Anforderung Nr. ${data.completeOrder.id} abgeschloßen`)
       back()
@@ -56,10 +54,8 @@ const Order = ({ order }: OrderProps) => {
     ClaimOrderMutationVariables
   >(CLAIM_ORDER, {
     variables: { id: order.id },
-    // refetchQueries: ['OrdersQuery'],
-    onQueryUpdated(query) {
-      query.refetch()
-    },
+    refetchQueries: ['OrdersQuery'],
+    awaitRefetchQueries: true,
     onCompleted(data) {
       toast.success(`Anforderung Nr. ${data.claimOrder.id} angenommen`)
       back()

@@ -18,6 +18,8 @@ const HomePage = () => {
           <Link to={routes.locations()}>Abholorte</Link>
 
           <Link to={routes.items()}>Artikel Liste</Link>
+
+          <Link to={routes.admin()}>Admin</Link>
         </div>
       </div>
     </>

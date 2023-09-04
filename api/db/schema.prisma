@@ -38,6 +38,7 @@ model Order {
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
   claimedAt         DateTime?
+  claimedBy         String?
   fulfilledAt       DateTime?
 
   deliverLocation DeliverLocation @relation(references: [id], fields: [deliverLocationId])
