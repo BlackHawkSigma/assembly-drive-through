@@ -7,6 +7,7 @@ export const schema = gql`
     updatedAt: DateTime!
     fulfilledAt: DateTime
     claimedAt: DateTime
+    claimedBy: String
     deliverLocation: DeliverLocation!
     item: Item!
   }
