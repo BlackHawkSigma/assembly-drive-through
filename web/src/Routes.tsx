@@ -18,6 +18,7 @@ const Routes = () => {
   return (
     <Router>
       <Set wrap={AdminLayout}>
+        <Route path="/admin" page={AdminAdminPage} name="admin"></Route>
         <Set wrap={ScaffoldLayout} title="Items" titleTo="adminItems" buttonLabel="New Item" buttonTo="adminNewItem">
           <Route path="/admin/items/new" page={AdminItemNewItemPage} name="adminNewItem" />
           <Route path="/admin/items/{id}/edit" page={AdminItemEditItemPage} name="adminEditItem" />
