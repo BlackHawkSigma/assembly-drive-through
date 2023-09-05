@@ -20,6 +20,7 @@ export const QUERY = gql`
       }
       createdAt
       claimedAt
+      claimedBy
     }
   }
 `

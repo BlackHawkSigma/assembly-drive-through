@@ -34,9 +34,19 @@ const OrderCard = ({ order }: OrderCardProps) => {
         <p>{order.deliverLocation.name}</p>
       </div>
 
-      <div className="flex justify-between">
-        <div>{isClaimed && `angenommen: ${claimed}`}</div>
+      <div className="flex flex-col items-end">
         <div>erstellt: {created}</div>
+
+        {isClaimed && (
+          <div>
+            {order.claimedBy && (
+              <>
+                von <span className="font-bold">{order.claimedBy} </span>
+              </>
+            )}
+            angenommen: {claimed}
+          </div>
+        )}
       </div>
     </div>
   )
