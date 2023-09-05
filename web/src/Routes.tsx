@@ -27,8 +27,8 @@ const Routes = () => {
         <Route path="/new-order" page={NewOrderPage} name="newOrder" />
         <Route path="/orders" page={OrdersPage} name="orders" />
         <Route path="/order/{id:Int}" page={OrderPage} name="order" />
-        <Route path="/" page={HomePage} name="home" />
-        <Route notfound page={NotFoundPage} />
+        <Route path="/" page={HomePage} name="home" prerender />
+        <Route notfound page={NotFoundPage} prerender />
       </Set>
 
       <Set wrap={AdminLayout}>
@@ -40,7 +40,7 @@ const Routes = () => {
           <Route path="/admin/items" page={AdminItemItemsPage} name="adminItems" />
         </Set>
         <Set wrap={ScaffoldLayout} title="PickupLocations" titleTo="adminPickupLocations" buttonLabel="New PickupLocation" buttonTo="adminNewPickupLocation">
-          <Route path="/admin/pickup-locations/new" page={AdminPickupLocationNewPickupLocationPage} name="adminNewPickupLocation" />
+          <Route path="/admin/pickup-locations/new" page={AdminPickupLocationNewPickupLocationPage} name="adminNewPickupLocation" prerender />
           <Route path="/admin/pickup-locations/{id:Int}/edit" page={AdminPickupLocationEditPickupLocationPage} name="adminEditPickupLocation" />
           <Route path="/admin/pickup-locations/{id:Int}" page={AdminPickupLocationPickupLocationPage} name="adminPickupLocation" />
           <Route path="/admin/pickup-locations" page={AdminPickupLocationPickupLocationsPage} name="adminPickupLocations" />
