@@ -11,7 +11,7 @@ import { toast } from '@redwoodjs/web/toast'
 import BarcodeDetection from 'src/components/BarcodeDetection/BarcodeDetection'
 import NewOrderForm from 'src/components/NewOrderForm/NewOrderForm'
 
-const CREATE_ORDER = gql`
+export const CREATE_ORDER = gql`
   mutation CreateOrderMutation($input: CreateOrderInput!) {
     createOrder(input: $input) {
       id

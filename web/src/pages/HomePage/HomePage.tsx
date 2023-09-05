@@ -15,6 +15,8 @@ const HomePage = () => {
             <Link to={routes.orders()}>Auftrags Liste</Link>
           </div>
 
+          <Link to={routes.orderScanner()}>Scannen</Link>
+
           <Link to={routes.locations()}>Abholorte</Link>
 
           <Link to={routes.myClaims()}>meine Aufträge</Link>
