@@ -1,5 +1,5 @@
 {
-  "version": "0.6.0",
+  "version": "0.8.0",
   "private": true,
   "workspaces": {
     "packages": [
@@ -8,8 +8,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/cli-storybook": "6.1.1",
-    "@redwoodjs/core": "6.1.1",
+    "@redwoodjs/cli-storybook": "6.2.0",
+    "@redwoodjs/core": "6.2.0",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
   "eslintConfig": {
