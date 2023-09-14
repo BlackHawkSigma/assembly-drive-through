@@ -8,7 +8,7 @@ import {
 } from 'types/graphql'
 import { useReadLocalStorage } from 'usehooks-ts'
 
-import { back } from '@redwoodjs/router'
+import { Link, back, routes } from '@redwoodjs/router'
 import { CellSuccessProps, useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/dist/toast'
 
@@ -37,7 +37,7 @@ const COMPLETE_ORDER = gql`
 type OrderProps = CellSuccessProps<FindOrderQuery, FindOrderQueryVariables>
 
 const Order = ({ order }: OrderProps) => {
-  const userName = useReadLocalStorage<string>('user-name')
+  const userName = useReadLocalStorage('user-name')
 
   const [complete, { loading: completeLoadig }] = useMutation<
     CompleteOrderMutation,
@@ -56,7 +56,6 @@ const Order = ({ order }: OrderProps) => {
     ClaimOrderMutation,
     ClaimOrderMutationVariables
   >(CLAIM_ORDER, {
-    variables: { id: order.id, input: { claimedBy: userName } },
     refetchQueries: ['OrdersQuery'],
     awaitRefetchQueries: true,
     onCompleted(data) {
@@ -68,7 +67,13 @@ const Order = ({ order }: OrderProps) => {
   const isClaimed = typeof order.claimedAt === 'string'
 
   const handleClaim = () => {
-    claim()
+    if (typeof userName === 'string') {
+      claim({ variables: { id: order.id, input: { claimedBy: userName } } })
+    } else {
+      toast.error(
+        <Link to={routes.userName()}>Bitte einen Namen / eine Funktion angeben</Link>
+      )
+    }
   }
 
   const handleCompletion = () => {

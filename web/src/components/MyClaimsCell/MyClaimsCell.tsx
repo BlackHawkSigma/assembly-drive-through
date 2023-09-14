@@ -51,8 +51,8 @@ export const Success = ({ orders }: CellSuccessProps<MyClaimsQuery>) => {
     </div>
   ) : (
     <div className="flex flex-col">
-      <p>Bitte einen Namen angeben</p>{' '}
-      <LinkButton to={routes.userName()}>namen ändern</LinkButton>{' '}
+      <p>Bitte einen Namen / eine Funktion angeben</p>{' '}
+      <LinkButton to={routes.userName()}>Namen ändern</LinkButton>{' '}
     </div>
   )
 }
