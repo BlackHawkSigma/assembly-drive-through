@@ -7,6 +7,8 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import LinkButton from 'src/components/Link/Link'
 import OrderCard from 'src/components/OrderCard/OrderCard'
 
+import CellEmpty from '../CellEmpty/CellEmpty'
+
 export const QUERY = gql`
   query MyClaimsQuery {
     orders {
@@ -30,7 +32,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => <CellEmpty />
 
 export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>

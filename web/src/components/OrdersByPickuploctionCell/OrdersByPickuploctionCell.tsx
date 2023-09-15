@@ -6,6 +6,7 @@ import type {
 import { routes, Link } from '@redwoodjs/router'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
+import CellEmpty from '../CellEmpty/CellEmpty'
 import OrderCard from '../OrderCard/OrderCard'
 
 export const QUERY = gql`
@@ -30,7 +31,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => <CellEmpty />
 
 export const Failure = ({
   error,
