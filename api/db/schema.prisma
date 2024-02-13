@@ -44,3 +44,10 @@ model Order {
   deliverLocation DeliverLocation @relation(references: [id], fields: [deliverLocationId])
   item            Item            @relation(references: [id], fields: [itemId])
 }
+
+model RW_DataMigration {
+  version    String   @id
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
+}
