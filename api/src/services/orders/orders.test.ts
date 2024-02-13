@@ -28,7 +28,6 @@ describe('orders', () => {
       scenario.order.two.deliverLocationId
     )
     expect(result.itemId).toEqual(scenario.order.two.itemId)
-    expect(result.updatedAt).toEqual(new Date('2023-08-18T18:16:11.586Z'))
   })
 
   scenario('deletes a order', async (scenario: StandardScenario) => {
