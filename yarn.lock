@@ -6499,14 +6499,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:0.5.4":
-  version: 0.5.4
-  resolution: "@tailwindcss/forms@npm:0.5.4"
+"@tailwindcss/forms@npm:0.5.7":
+  version: 0.5.7
+  resolution: "@tailwindcss/forms@npm:0.5.7"
   dependencies:
     mini-svg-data-uri: "npm:^1.2.3"
   peerDependencies:
     tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
-  checksum: 10c0/2abba0dff6b9fcd66b84cdd66fb19209e5a6ff52bcfdc8cbf88898b09c63250fd853fa22eb749851c493e9aa8020972873e66890a1a482ce1a9b8d04c6901c4e
+  checksum: 10c0/cd29e0c978402ae87a923ae802dcff43f7b050595666cb067321cac2e37a52f61b9d73385cb0a10455548581ddd0d3886815bd6c64a1da06247c0057fa9f4601
   languageName: node
   linkType: hard
 
@@ -24049,7 +24049,7 @@ __metadata:
     "@redwoodjs/router": "npm:6.6.4"
     "@redwoodjs/vite": "npm:6.6.4"
     "@redwoodjs/web": "npm:6.6.4"
-    "@tailwindcss/forms": "npm:0.5.4"
+    "@tailwindcss/forms": "npm:0.5.7"
     autoprefixer: "npm:10.4.15"
     canvas: "npm:2.11.2"
     humanize-string: "npm:2.1.0"
