@@ -35,7 +35,6 @@ const NewOrderPage = () => {
 
   const handleSubmit = (data) => {
     const input: CreateOrderInput = {
-      deliverLocationId: 1,
       itemId: data.code,
     }
 
@@ -44,7 +43,6 @@ const NewOrderPage = () => {
 
   const handleScan = (code: string) => {
     const input: CreateOrderInput = {
-      deliverLocationId: 1,
       itemId: code,
     }
 

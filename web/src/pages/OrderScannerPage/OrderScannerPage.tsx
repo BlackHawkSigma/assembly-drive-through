@@ -23,7 +23,7 @@ const OrderScannerPage = () => {
   })
 
   const handleFire = (data: string) => {
-    create({ variables: { input: { deliverLocationId: 1, itemId: data } } })
+    create({ variables: { input: { itemId: data } } })
   }
   return (
     <>

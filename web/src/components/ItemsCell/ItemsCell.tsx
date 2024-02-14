@@ -12,6 +12,9 @@ export const QUERY = gql`
       pickupLocation {
         name
       }
+      deliverLocation {
+        name
+      }
     }
   }
 `
@@ -36,6 +39,9 @@ export const Success = ({ items }: CellSuccessProps<ItemsQuery>) => {
             <p className="text-2xl">{item.name}</p>
             <p className="self-start pl-6 text-sm">
               Abholort: {item.pickupLocation.name}
+            </p>
+            <p className="self-start pl-6 text-sm">
+              Ablieferort: {item.deliverLocation.name}
             </p>
 
             <Barcode payload={item.id} />

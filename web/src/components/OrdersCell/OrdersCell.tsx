@@ -16,9 +16,9 @@ export const QUERY = gql`
         pickupLocation {
           name
         }
-      }
-      deliverLocation {
-        name
+        deliverLocation {
+          name
+        }
       }
       createdAt
       claimedAt

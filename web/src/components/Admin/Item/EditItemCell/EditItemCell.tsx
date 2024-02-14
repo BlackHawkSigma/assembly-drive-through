@@ -19,6 +19,11 @@ export const QUERY = gql`
       id
       name
     }
+
+    deliverLocations {
+      id
+      name
+    }
   }
 `
 const UPDATE_ITEM_MUTATION = gql`
@@ -27,6 +32,7 @@ const UPDATE_ITEM_MUTATION = gql`
       id
       name
       pickupLocationId
+      deliverLocationId
     }
   }
 `
@@ -40,6 +46,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({
   item,
   pickupLocations,
+  deliverLocations,
 }: CellSuccessProps<EditItemById>) => {
   const [updateItem, { loading, error }] = useMutation(UPDATE_ITEM_MUTATION, {
     onCompleted: () => {
@@ -65,7 +72,8 @@ export const Success = ({
       <div className="rw-segment-main">
         <ItemForm
           item={item}
-          locations={pickupLocations}
+          pickupLocations={pickupLocations}
+          deliverLocations={deliverLocations}
           onSave={onSave}
           error={error}
           loading={loading}

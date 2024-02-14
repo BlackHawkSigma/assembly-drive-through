@@ -56,6 +56,10 @@ const Item = ({ item }: Props) => {
               <th>Pickup location</th>
               <td>{item.pickupLocation.name}</td>
             </tr>
+            <tr>
+              <th>Deliver location</th>
+              <td>{item.deliverLocation.name}</td>
+            </tr>
           </tbody>
         </table>
       </div>

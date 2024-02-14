@@ -13,6 +13,10 @@ export const QUERY = gql`
       id
       name
     }
+    deliverLocations {
+      id
+      name
+    }
   }
 `
 
@@ -32,7 +36,10 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({ pickupLocations }: CellSuccessProps<NewItem>) => {
+export const Success = ({
+  pickupLocations,
+  deliverLocations,
+}: CellSuccessProps<NewItem>) => {
   const [createItem, { loading, error }] = useMutation(CREATE_ITEM_MUTATION, {
     onCompleted: () => {
       toast.success('Item created')
@@ -54,7 +61,8 @@ export const Success = ({ pickupLocations }: CellSuccessProps<NewItem>) => {
       </header>
       <div className="rw-segment-main">
         <NewItemForm
-          locations={pickupLocations}
+          pickupLocations={pickupLocations}
+          deliverLocations={deliverLocations}
           onSave={onSave}
           loading={loading}
           error={error}

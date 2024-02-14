@@ -13,18 +13,6 @@ import { toast } from '@redwoodjs/web/dist/toast'
 
 import Barcode from 'src/components/Barcode/Barcode'
 
-export const QUERY = gql`
-  query ItemsQuery {
-    items {
-      id
-      name
-      pickupLocation {
-        name
-      }
-    }
-  }
-`
-
 const CREATE_ORDER = gql`
   mutation CreateOrderQuickMutation($input: CreateOrderInput!) {
     createOrder(input: $input) {
@@ -55,7 +43,7 @@ export const Success = ({ items }: CellSuccessProps<ItemsQuery>) => {
   })
 
   const onOrder = (id: string) => {
-    order({ variables: { input: { itemId: id, deliverLocationId: 1 } } })
+    order({ variables: { input: { itemId: id } } })
   }
 
   return (

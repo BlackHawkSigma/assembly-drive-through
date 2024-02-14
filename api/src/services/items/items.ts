@@ -42,4 +42,7 @@ export const Item: ItemRelationResolvers = {
   pickupLocation: (_obj, { root }) => {
     return db.item.findUnique({ where: { id: root?.id } }).pickupLocation()
   },
+  deliverLocation: (_obj, { root }) => {
+    return db.item.findUnique({ where: { id: root?.id } }).deliverLocation()
+  },
 }

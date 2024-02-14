@@ -12,6 +12,9 @@ export const QUERY = gql`
       pickupLocation {
         name
       }
+      deliverLocation {
+        name
+      }
     }
   }
 `
