@@ -45,6 +45,12 @@ const Routes = () => {
           <Route path="/admin/pickup-locations/{id:Int}" page={AdminPickupLocationPickupLocationPage} name="adminPickupLocation" />
           <Route path="/admin/pickup-locations" page={AdminPickupLocationPickupLocationsPage} name="adminPickupLocations" />
         </Set>
+        <Set wrap={ScaffoldLayout} title="DeliverLocations" titleTo="adminDeliverLocations" buttonLabel="New DeliverLocation" buttonTo="adminNewDeliverLocation">
+          <Route path="/admin/deliver-locations/new" page={AdminDeliverLocationNewDeliverLocationPage} name="adminNewDeliverLocation" />
+          <Route path="/admin/deliver-locations/{id:Int}/edit" page={AdminDeliverLocationEditDeliverLocationPage} name="adminEditDeliverLocation" />
+          <Route path="/admin/deliver-locations/{id:Int}" page={AdminDeliverLocationDeliverLocationPage} name="adminDeliverLocation" />
+          <Route path="/admin/deliver-locations" page={AdminDeliverLocationDeliverLocationsPage} name="adminDeliverLocations" />
+        </Set>
       </Set>
     </Router>
   )

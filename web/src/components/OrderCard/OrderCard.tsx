@@ -31,7 +31,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
       <div className="mb-1 flex items-center justify-center gap-2 text-2xl">
         <p>{order.item.pickupLocation.name}</p>
         <SlArrowRight />
-        <p>{order.deliverLocation.name}</p>
+        <p>{order.item.deliverLocation.name}</p>
       </div>
 
       <div className="flex flex-col items-end">

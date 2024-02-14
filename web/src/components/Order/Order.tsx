@@ -71,7 +71,9 @@ const Order = ({ order }: OrderProps) => {
       claim({ variables: { id: order.id, input: { claimedBy: userName } } })
     } else {
       toast.error(
-        <Link to={routes.userName()}>Bitte einen Namen / eine Funktion angeben</Link>
+        <Link to={routes.userName()}>
+          Bitte einen Namen / eine Funktion angeben
+        </Link>
       )
     }
   }

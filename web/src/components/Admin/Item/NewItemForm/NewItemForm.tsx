@@ -18,7 +18,8 @@ import {
 type FormItem = NonNullable<NewItemVariables['item']>
 
 interface ItemFormProps {
-  locations: EditItemById['pickupLocations']
+  pickupLocations: EditItemById['pickupLocations']
+  deliverLocations: EditItemById['deliverLocations']
   onSave: (data: CreateItemInput) => void
   error: RWGqlError
   loading: boolean
@@ -83,12 +84,12 @@ const NewItemForm = (props: ItemFormProps) => {
 
         <SelectField
           name="pickupLocationId"
-          defaultValue={props.locations.at(0).id}
+          defaultValue={props.pickupLocations.at(0).id}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ valueAsNumber: true, required: true }}
         >
-          {props.locations.map((location) => (
+          {props.pickupLocations.map((location) => (
             <option key={location.id} value={location.id}>
               {location.name}
             </option>
@@ -96,6 +97,30 @@ const NewItemForm = (props: ItemFormProps) => {
         </SelectField>
 
         <FieldError name="pickupLocationId" className="rw-field-error" />
+
+        <Label
+          name="deliverLocationId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Deliver location
+        </Label>
+
+        <SelectField
+          name="deliverLocationId"
+          defaultValue={props.deliverLocations.at(0).id}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ valueAsNumber: true, required: true }}
+        >
+          {props.deliverLocations.map((location) => (
+            <option key={location.id} value={location.id}>
+              {location.name}
+            </option>
+          ))}
+        </SelectField>
+
+        <FieldError name="deliverLocationId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

@@ -9,9 +9,9 @@ export const standard = (/* vars, { ctx, req } */) => ({
         pickupLocation: {
           name: 'Test Lager',
         },
-      },
-      deliverLocation: {
-        name: 'Test Montage',
+        deliverLocation: {
+          name: 'Test Montage',
+        },
       },
       createdAt: new Date('2023-08-21T11:00:00Z').toString(),
       updatedAt: new Date('2023-08-21T11:00:00Z').toString(),
@@ -25,9 +25,9 @@ export const standard = (/* vars, { ctx, req } */) => ({
         pickupLocation: {
           name: 'Test Lager',
         },
-      },
-      deliverLocation: {
-        name: 'Test Montage',
+        deliverLocation: {
+          name: 'Test Montage',
+        },
       },
       createdAt: new Date('2023-08-21T11:00:00Z').toString(),
       updatedAt: new Date('2023-08-21T11:00:00Z').toString(),
@@ -41,9 +41,9 @@ export const standard = (/* vars, { ctx, req } */) => ({
         pickupLocation: {
           name: 'Test Lager',
         },
-      },
-      deliverLocation: {
-        name: 'Test Montage',
+        deliverLocation: {
+          name: 'Test Montage',
+        },
       },
       createdAt: new Date('2023-08-21T11:00:00Z').toString(),
       updatedAt: new Date('2023-08-21T11:00:00Z').toString(),

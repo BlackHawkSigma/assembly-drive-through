@@ -45,6 +45,7 @@ const ItemsList = ({ items }: FindItems) => {
             <th>Id</th>
             <th>Name</th>
             <th>Pickup location</th>
+            <th>Deliver location</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -54,6 +55,7 @@ const ItemsList = ({ items }: FindItems) => {
               <td>{truncate(item.id)}</td>
               <td>{truncate(item.name)}</td>
               <td>{truncate(item.pickupLocation.name)}</td>
+              <td>{truncate(item.deliverLocation.name)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link
