@@ -17975,7 +17975,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.6, nanoid@npm:^3.3.7":
+"nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
@@ -19661,18 +19661,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.28":
-  version: 8.4.28
-  resolution: "postcss@npm:8.4.28"
-  dependencies:
-    nanoid: "npm:^3.3.6"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.0.2"
-  checksum: 10c0/7dc843c26fec9d26a6f3abae3525c160de2fb22ee2163ac3f1fdb15a5651342893e38ffd6c26fddac8e42c9aa629dc80ea20bf5a796c954150cf9295adf8b09c
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.14, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.27, postcss@npm:^8.4.33":
+"postcss@npm:8.4.35, postcss@npm:^8.2.14, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.27, postcss@npm:^8.4.33":
   version: 8.4.35
   resolution: "postcss@npm:8.4.35"
   dependencies:
@@ -24054,7 +24043,7 @@ __metadata:
     canvas: "npm:2.11.2"
     humanize-string: "npm:2.1.0"
     jsbarcode: "npm:3.11.6"
-    postcss: "npm:8.4.28"
+    postcss: "npm:8.4.35"
     postcss-loader: "npm:8.1.0"
     prop-types: "npm:15.8.1"
     react: "npm:18.2.0"
