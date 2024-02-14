@@ -39,7 +39,7 @@ export const deleteDeliverLocation: MutationResolvers['deleteDeliverLocation'] =
   }
 
 export const DeliverLocation: DeliverLocationRelationResolvers = {
-  Order: (_obj, { root }) => {
-    return db.deliverLocation.findUnique({ where: { id: root?.id } }).Order()
+  Item: (_obj, { root }) => {
+    return db.deliverLocation.findUnique({ where: { id: root?.id } }).Item()
   },
 }

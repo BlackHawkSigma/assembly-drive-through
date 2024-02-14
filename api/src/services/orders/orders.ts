@@ -42,16 +42,6 @@ export const createOrder: MutationResolvers['createOrder'] = async ({
   })
 }
 
-export const updateOrder: MutationResolvers['updateOrder'] = ({
-  id,
-  input,
-}) => {
-  return db.order.update({
-    data: input,
-    where: { id },
-  })
-}
-
 export const deleteOrder: MutationResolvers['deleteOrder'] = ({ id }) => {
   return db.order.delete({
     where: { id },
@@ -73,9 +63,6 @@ export const completeOrder: MutationResolvers['completeOrder'] = ({ id }) => {
 }
 
 export const Order: OrderRelationResolvers = {
-  deliverLocation: (_obj, { root }) => {
-    return db.order.findUnique({ where: { id: root?.id } }).deliverLocation()
-  },
   item: (_obj, { root }) => {
     return db.order.findUnique({ where: { id: root?.id } }).item()
   },

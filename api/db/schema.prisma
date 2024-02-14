@@ -19,30 +19,31 @@ model DeliverLocation {
   id   Int    @id @default(autoincrement())
   name String
 
-  Order Order[]
+  Item Item[]
 }
 
 model Item {
-  id               String         @id
-  name             String         @unique
-  pickupLocationId Int
-  pickupLocation   PickupLocation @relation(references: [id], fields: [pickupLocationId])
+  id                String @id
+  name              String @unique
+  pickupLocationId  Int
+  deliverLocationId Int    @default(1)
+
+  pickupLocation  PickupLocation  @relation(references: [id], fields: [pickupLocationId])
+  deliverLocation DeliverLocation @relation(references: [id], fields: [deliverLocationId])
 
   Order Order[]
 }
 
 model Order {
-  id                Int       @id @default(autoincrement())
-  deliverLocationId Int
-  itemId            String
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
-  claimedAt         DateTime?
-  claimedBy         String?
-  fulfilledAt       DateTime?
+  id          Int       @id @default(autoincrement())
+  itemId      String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  claimedAt   DateTime?
+  claimedBy   String?
+  fulfilledAt DateTime?
 
-  deliverLocation DeliverLocation @relation(references: [id], fields: [deliverLocationId])
-  item            Item            @relation(references: [id], fields: [itemId])
+  item Item @relation(references: [id], fields: [itemId])
 }
 
 model RW_DataMigration {

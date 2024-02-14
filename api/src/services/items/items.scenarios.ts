@@ -11,6 +11,9 @@ export const standard = defineScenario<Prisma.ItemCreateArgs>({
         pickupLocation: {
           connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
         },
+        deliverLocation: {
+          connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
+        },
       },
     },
     two: {
@@ -18,6 +21,9 @@ export const standard = defineScenario<Prisma.ItemCreateArgs>({
         id: '456',
         name: 'Heck',
         pickupLocation: {
+          connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
+        },
+        deliverLocation: {
           connectOrCreate: { create: { name: 'String' }, where: { id: 1 } },
         },
       },

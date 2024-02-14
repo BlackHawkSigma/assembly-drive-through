@@ -1,14 +1,12 @@
 export const schema = gql`
   type Order {
     id: Int!
-    deliverLocationId: Int!
     itemId: String!
     createdAt: DateTime!
     updatedAt: DateTime!
     fulfilledAt: DateTime
     claimedAt: DateTime
     claimedBy: String
-    deliverLocation: DeliverLocation!
     item: Item!
   }
 
@@ -19,7 +17,6 @@ export const schema = gql`
   }
 
   input CreateOrderInput {
-    deliverLocationId: Int!
     itemId: String!
   }
 
@@ -27,14 +24,8 @@ export const schema = gql`
     claimedBy: String!
   }
 
-  input UpdateOrderInput {
-    deliverLocationId: Int
-    itemId: String
-  }
-
   type Mutation {
     createOrder(input: CreateOrderInput!): Order! @requireAuth
-    updateOrder(id: Int!, input: UpdateOrderInput!): Order! @requireAuth
     deleteOrder(id: Int!): Order! @requireAuth
     claimOrder(id: Int!, input: ClaimOrderInput!): Order! @requireAuth
     completeOrder(id: Int!): Order! @requireAuth

@@ -2,7 +2,7 @@ export const schema = gql`
   type DeliverLocation {
     id: Int!
     name: String!
-    Order: [Order]!
+    Item: [Item!]!
   }
 
   type Query {

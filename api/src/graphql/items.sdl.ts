@@ -4,6 +4,8 @@ export const schema = gql`
     name: String!
     pickupLocationId: Int!
     pickupLocation: PickupLocation!
+    deliverLocationId: Int!
+    deliverLocation: DeliverLocation!
     Order: [Order]!
   }
 
@@ -16,11 +18,13 @@ export const schema = gql`
     id: String!
     name: String!
     pickupLocationId: Int!
+    deliverLocationId: Int!
   }
 
   input UpdateItemInput {
     name: String
     pickupLocationId: Int
+    deliverLocationId: Int
   }
 
   type Mutation {
