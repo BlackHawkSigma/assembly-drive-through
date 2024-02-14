@@ -18,15 +18,9 @@ describe('orders', () => {
 
   scenario('creates a order', async (scenario: StandardScenario) => {
     const result = await createOrder({
-      input: {
-        deliverLocationId: scenario.order.two.deliverLocationId,
-        itemId: scenario.order.two.itemId,
-      },
+      input: { itemId: scenario.order.two.itemId },
     })
 
-    expect(result.deliverLocationId).toEqual(
-      scenario.order.two.deliverLocationId
-    )
     expect(result.itemId).toEqual(scenario.order.two.itemId)
   })
 

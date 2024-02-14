@@ -28,6 +28,7 @@ describe('items', () => {
         id: '789',
         name: 'String6143635',
         pickupLocationId: scenario.item.two.pickupLocationId,
+        deliverLocationId: scenario.item.two.deliverLocationId,
       },
     })
 
