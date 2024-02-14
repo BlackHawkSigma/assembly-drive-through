@@ -1,10 +1,10 @@
+import type { CreateDeliverLocationInput } from 'types/graphql'
+
 import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import DeliverLocationForm from 'src/components/Admin/DeliverLocation/DeliverLocationForm'
-
-import type { CreateDeliverLocationInput } from 'types/graphql'
 
 const CREATE_DELIVER_LOCATION_MUTATION = gql`
   mutation CreateDeliverLocationMutation($input: CreateDeliverLocationInput!) {
