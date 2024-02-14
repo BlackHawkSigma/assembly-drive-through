@@ -1,0 +1,16 @@
+name: Yarn Release Workflow
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Strategy
+        run: yarn version check
