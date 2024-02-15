@@ -11,7 +11,7 @@
     "@redwoodjs/cli-data-migrate": "6.6.4",
     "@redwoodjs/cli-storybook": "6.6.4",
     "@redwoodjs/core": "6.6.4",
-    "prettier-plugin-tailwindcss": "0.4.1"
+    "prettier-plugin-tailwindcss": "0.5.11"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
