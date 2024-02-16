@@ -52,7 +52,7 @@ const NewItemForm = (props: ItemFormProps) => {
           name="id"
           className="rw-input"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
+          validation={{ required: true, pattern: /^[a-zA-Z0-9]+$/ }}
         />
 
         <FieldError name="id" className="rw-field-error" />
