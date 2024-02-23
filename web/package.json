@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "browserslist": {
     "development": [
@@ -27,9 +27,11 @@
     "@redwoodjs/vite": "6.6.4",
     "@tailwindcss/forms": "0.5.7",
     "autoprefixer": "10.4.17",
-    "canvas": "2.11.2",
     "postcss": "8.4.35",
     "postcss-loader": "8.1.0",
     "tailwindcss": "3.4.1"
+  },
+  "optionalDependencies": {
+    "canvas": "2.11.2"
   }
 }
