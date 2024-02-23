@@ -8746,6 +8746,7 @@ __metadata:
   resolution: "api@workspace:api"
   dependencies:
     "@redwoodjs/api": "npm:7.0.2"
+    "@redwoodjs/api-server": "npm:7.0.2"
     "@redwoodjs/graphql-server": "npm:7.0.2"
   languageName: unknown
   linkType: soft
@@ -20155,7 +20156,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -24254,7 +24255,6 @@ __metadata:
     jsbarcode: "npm:3.11.6"
     postcss: "npm:8.4.35"
     postcss-loader: "npm:8.1.0"
-    prop-types: "npm:15.8.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-icons: "npm:5.0.1"
