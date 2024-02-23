@@ -1,0 +1,4 @@
+releases:
+  api: major
+  root-workspace-0b6124: major
+  web: major
