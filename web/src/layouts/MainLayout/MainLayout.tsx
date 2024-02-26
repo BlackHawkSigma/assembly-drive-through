@@ -13,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Toaster />
-      <nav className="shadow-teal-00 flex items-baseline justify-end gap-4 bg-blue-600 p-2 shadow-md">
+      <nav className="shadow-teal-00 flex items-baseline justify-end gap-4 bg-teal-400 p-2 shadow-md">
         <div className="grow">
           <Link className="text-2xl md:text-lg" to={routes.home()}>
             Home
