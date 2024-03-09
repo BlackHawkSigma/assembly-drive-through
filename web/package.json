@@ -11,9 +11,9 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "7.1.1",
-    "@redwoodjs/router": "7.1.1",
-    "@redwoodjs/web": "7.1.1",
+    "@redwoodjs/forms": "7.1.2",
+    "@redwoodjs/router": "7.1.2",
+    "@redwoodjs/web": "7.1.2",
     "humanize-string": "2.1.0",
     "jsbarcode": "3.11.6",
     "react": "18.2.0",
@@ -23,7 +23,7 @@
     "usehooks-ts": "2.16.0"
   },
   "devDependencies": {
-    "@redwoodjs/vite": "7.1.1",
+    "@redwoodjs/vite": "7.1.2",
     "@tailwindcss/forms": "0.5.7",
     "@types/react": "18.2.64",
     "@types/react-dom": "18.2.21",
