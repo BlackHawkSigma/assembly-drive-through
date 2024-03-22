@@ -20,7 +20,7 @@
     "react-dom": "18.2.0",
     "react-icons": "5.0.1",
     "react-qr-barcode-scanner": "1.0.6",
-    "usehooks-ts": "3.0.1"
+    "usehooks-ts": "3.0.2"
   },
   "devDependencies": {
     "@redwoodjs/vite": "7.1.3",
