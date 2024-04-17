@@ -21307,6 +21307,7 @@ __metadata:
     "@redwoodjs/cli-data-migrate": "npm:7.4.1"
     "@redwoodjs/cli-storybook": "npm:7.4.1"
     "@redwoodjs/core": "npm:7.4.1"
+    prettier: "npm:2.8.8"
     prettier-plugin-tailwindcss: "npm:0.4.1"
   languageName: unknown
   linkType: soft
