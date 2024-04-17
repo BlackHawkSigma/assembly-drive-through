@@ -26,6 +26,7 @@ const Routes = () => {
         <Route path="/items" page={ItemsPage} name="items" />
         <Route path="/new-order" page={NewOrderPage} name="newOrder" />
         <Route path="/orders" page={OrdersPage} name="orders" />
+        <Route path="/closed-orders" page={ClosedOrdersPage} name="closedOrders" />
         <Route path="/order/{id:Int}" page={OrderPage} name="order" />
         <Route path="/" page={HomePage} name="home" prerender />
         <Route notfound page={NotFoundPage} prerender />

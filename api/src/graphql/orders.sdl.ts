@@ -10,8 +10,20 @@ export const schema = gql`
     item: Item!
   }
 
+  type ClosedOrder {
+    id: Int!
+    itemId: String!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    fulfilledAt: DateTime!
+    claimedAt: DateTime!
+    claimedBy: String!
+    item: Item!
+  }
+
   type Query {
     orders: [Order!]! @requireAuth
+    closedOrders(from: DateTime!, to: DateTime!): [ClosedOrder!]! @skipAuth
     ordersByPickuploction(id: Int!): [Order!]! @requireAuth
     order(id: Int!): Order @requireAuth
   }

@@ -12,6 +12,13 @@ export const orders: QueryResolvers['orders'] = () => {
   return db.order.findMany({ where: { fulfilledAt: null } })
 }
 
+export const closedOrders: QueryResolvers['closedOrders'] = ({ from, to }) => {
+  return db.order.findMany({
+    where: { fulfilledAt: { not: null }, createdAt: { gte: from, lt: to } },
+    include: { item: true },
+  })
+}
+
 export const ordersByPickuploction: QueryResolvers['ordersByPickuploction'] = ({
   id,
 }) => {
