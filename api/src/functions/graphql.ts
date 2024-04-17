@@ -1,3 +1,5 @@
+import { DateTimeResolver, DateTimeTypeDefinition } from 'graphql-scalars'
+
 import { createGraphQLHandler } from '@redwoodjs/graphql-server'
 
 import directives from 'src/directives/**/*.{js,ts}'
@@ -12,6 +14,10 @@ export const handler = createGraphQLHandler({
   directives,
   sdls,
   services,
+  schemaOptions: {
+    typeDefs: [DateTimeTypeDefinition],
+    resolvers: { DateTime: DateTimeResolver },
+  },
   onException: () => {
     // Disconnect from your database with an unhandled exception.
     db.$disconnect()

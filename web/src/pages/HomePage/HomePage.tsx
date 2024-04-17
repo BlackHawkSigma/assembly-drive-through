@@ -23,6 +23,8 @@ const HomePage = () => {
 
           <Link to={routes.myClaims()}>meine Aufträge</Link>
 
+          <Link to={routes.closedOrders()}>abgeschlossene Aufträge</Link>
+
           <Link to={routes.items()}>Artikel Liste</Link>
 
           <Link to={routes.admin()}>Admin</Link>
