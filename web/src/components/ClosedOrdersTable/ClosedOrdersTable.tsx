@@ -7,7 +7,7 @@ type ClosedOrdersTableProps = {
 
 const ClosedOrdersTable = ({ closedOrders }: ClosedOrdersTableProps) => {
   return (
-    <table className="mx-auto w-3/4 table-fixed">
+    <table className="container mx-auto table-auto">
       <thead>
         <tr>
           <th>Artikel</th>
