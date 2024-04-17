@@ -49,7 +49,6 @@ const BarcodeDetection = ({ onScan }: BarcodeDetectionProps) => {
 
   return (
     <div className="mx-auto">
-      {/* @ts-expect-error can not be used as jsx component */}
       <BarcodeScannerComponent
         // width={500}
         // height={500}
