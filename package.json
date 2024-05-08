@@ -8,9 +8,9 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/cli-data-migrate": "7.4.3",
-    "@redwoodjs/cli-storybook": "7.4.3",
-    "@redwoodjs/core": "7.4.3",
+    "@redwoodjs/cli-data-migrate": "7.5.0",
+    "@redwoodjs/cli-storybook": "7.5.0",
+    "@redwoodjs/core": "7.5.0",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
