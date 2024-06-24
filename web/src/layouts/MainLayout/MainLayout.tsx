@@ -30,9 +30,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <NavLink
           className="rounded-md bg-black/10 px-4 py-1"
           activeClassName="underline"
-          to={routes.newOrder()}
+          to={routes.orderScanner()}
         >
-          neuer Auftrag
+          Scannen
         </NavLink>
         <NavLink
           className="rounded-md bg-black/10 px-4 py-1"
