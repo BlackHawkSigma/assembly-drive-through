@@ -33,6 +33,8 @@ const NewOrderPage = () => {
     },
   })
 
+  const isSecureContext = window.isSecureContext
+
   const handleSubmit = (data) => {
     const input: CreateOrderInput = {
       itemId: data.code,
@@ -56,12 +58,16 @@ const NewOrderPage = () => {
       <div className="mx-auto  lg:w-96">
         <h1 className="mb-6 text-center text-2xl">neuer Auftrag</h1>
 
-        <p className="text-center text-xl">Barcode scannen</p>
-        <div className="p-4">
-          {!loading && <BarcodeDetection onScan={handleScan} />}
-        </div>
+        {isSecureContext && (
+          <>
+            <p className="text-center text-xl">Barcode scannen</p>
+            <div className="p-4">
+              {!loading && <BarcodeDetection onScan={handleScan} />}
+            </div>
+            <p className="text-center text-lg">oder manuell eingeben:</p>
+          </>
+        )}
 
-        <p className="text-center text-lg">oder manuell eingeben:</p>
         <NewOrderForm onSubmit={handleSubmit} loading={loading} error={error} />
       </div>
     </>
