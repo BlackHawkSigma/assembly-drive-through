@@ -7719,7 +7719,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.3.0, @types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:18.3.1":
+  version: 18.3.1
+  resolution: "@types/react-dom@npm:18.3.1"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10c0/8b416551c60bb6bd8ec10e198c957910cfb271bc3922463040b0d57cf4739cdcd24b13224f8d68f10318926e1ec3cd69af0af79f0291b599a992f8c80d47f1eb
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
   dependencies:
@@ -24670,7 +24679,7 @@ __metadata:
     "@redwoodjs/web": "npm:7.7.4"
     "@tailwindcss/forms": "npm:0.5.9"
     "@types/react": "npm:18.3.11"
-    "@types/react-dom": "npm:18.3.0"
+    "@types/react-dom": "npm:18.3.1"
     autoprefixer: "npm:10.4.20"
     canvas: "npm:2.11.2"
     date-fns: "npm:4.1.0"
