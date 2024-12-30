@@ -19275,13 +19275,13 @@ __metadata:
   linkType: hard
 
 "own-keys@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "own-keys@npm:1.0.0"
+  version: 1.0.1
+  resolution: "own-keys@npm:1.0.1"
   dependencies:
     get-intrinsic: "npm:^1.2.6"
     object-keys: "npm:^1.1.1"
     safe-push-apply: "npm:^1.0.0"
-  checksum: 10c0/d32a6f842bfca703ec6cc09707262a5dcb0b6453992451bddb28a74db0cd1ff28f5dc2476043b9eac7439bf286fca6b0278ec338c630fda3558372962544dc7f
+  checksum: 10c0/6dfeb3455bff92ec3f16a982d4e3e65676345f6902d9f5ded1d8265a6318d0200ce461956d6d1c70053c7fe9f9fe65e552faac03f8140d37ef0fdd108e67013a
   languageName: node
   linkType: hard
 
