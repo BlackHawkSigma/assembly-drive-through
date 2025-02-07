@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "3.0.0",
   "private": true,
   "workspaces": {
     "packages": [
@@ -8,9 +8,9 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/cli-data-migrate": "7.7.4",
-    "@redwoodjs/cli-storybook": "7.7.4",
-    "@redwoodjs/core": "7.7.4",
+    "@redwoodjs/cli-data-migrate": "6.6.4",
+    "@redwoodjs/cli-storybook": "6.6.4",
+    "@redwoodjs/core": "6.6.4",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
@@ -22,7 +22,8 @@
     }
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "=18.x",
+    "yarn": ">=1.15"
   },
   "prisma": {
     "seed": "yarn rw exec seed"

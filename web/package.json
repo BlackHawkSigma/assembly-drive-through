@@ -11,13 +11,14 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "7.7.4",
-    "@redwoodjs/router": "7.7.4",
-    "@redwoodjs/web": "7.7.4",
+    "@redwoodjs/forms": "6.6.4",
+    "@redwoodjs/router": "6.6.4",
+    "@redwoodjs/web": "6.6.4",
     "date-fns": "4.1.0",
     "humanize-string": "2.1.0",
     "jsbarcode": "3.11.6",
     "lodash": "4.17.21",
+    "prop-types": "15.8.1",
     "react": "18.3.1",
     "react-datepicker": "7.6.0",
     "react-dom": "18.3.1",
@@ -26,7 +27,7 @@
     "usehooks-ts": "3.1.1"
   },
   "devDependencies": {
-    "@redwoodjs/vite": "7.7.4",
+    "@redwoodjs/vite": "6.6.4",
     "@tailwindcss/forms": "0.5.10",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
