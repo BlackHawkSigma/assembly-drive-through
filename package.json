@@ -12,7 +12,7 @@
     "@redwoodjs/cli-storybook": "6.6.4",
     "@redwoodjs/core": "6.6.4",
     "prettier": "2.8.8",
-    "prettier-plugin-tailwindcss": "0.4.1"
+    "prettier-plugin-tailwindcss": "0.6.11"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
