@@ -4,12 +4,8 @@ import { LuFlashlight, LuFlashlightOff } from 'react-icons/lu'
 import BarcodeScannerComponent from 'react-qr-barcode-scanner'
 import { useLocalStorage } from 'usehooks-ts'
 
-import { toast } from '@redwoodjs/web/dist/toast'
-
 import Button from 'src/components/Button/Button'
 import useBeep from 'src/hooks/useBeep'
-
-const scoopRegex = /^5\d{7}$/
 
 type BarcodeDetectionProps = {
   onScan: (code: string) => void
@@ -38,13 +34,8 @@ const BarcodeDetection = ({ onScan }: BarcodeDetectionProps) => {
   useEffect(() => {
     if (!code) return
 
-    if (scoopRegex.test(code)) {
-      successBeep()
-      onScan(code)
-    } else {
-      failureBeep()
-      toast.error(`Code "${code}" entspricht nicht dem erwarteten Format`)
-    }
+    successBeep()
+    onScan(code)
   }, [successBeep, code, failureBeep, onScan])
 
   return (
