@@ -7428,24 +7428,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.18":
+"@types/react@npm:18.3.18, @types/react@npm:^18.2.0":
   version: 18.3.18
   resolution: "@types/react@npm:18.3.18"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/8fb2b00672072135d0858dc9db07873ea107cc238b6228aaa2a9afd1ef7a64a7074078250db38afbeb19064be8ea6af5eac32d404efdd5f45e093cc4829d87f8
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^16.9.35":
-  version: 16.14.62
-  resolution: "@types/react@npm:16.14.62"
-  dependencies:
-    "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:^0.16"
-    csstype: "npm:^3.0.2"
-  checksum: 10c0/3c913ae6c49b3ee8504e2e6f603db6440a0b99d737b607b2df8f39a50484b089c547f239294615de6b877f5db5217f23bc2610b232034612985afd4621ca8ace
   languageName: node
   linkType: hard
 
@@ -7476,13 +7465,6 @@ __metadata:
   version: 0.23.0
   resolution: "@types/scheduler@npm:0.23.0"
   checksum: 10c0/5cf7f2ba3732b74877559eb20b19f95fcd0a20c17dcb20e75a7ca7c7369cd455aeb2d406b3ff5a38168a9750da3bad78dd20d96d11118468b78f4959b8e56090
-  languageName: node
-  linkType: hard
-
-"@types/scheduler@npm:^0.16":
-  version: 0.16.8
-  resolution: "@types/scheduler@npm:0.16.8"
-  checksum: 10c0/f86de504945b8fc41b1f391f847444d542e2e4067cf7e5d9bfeb5d2d2393d3203b1161bc0ef3b1e104d828dabfb60baf06e8d2c27e27ff7e8258e6e618d8c4ec
   languageName: node
   linkType: hard
 
@@ -8344,16 +8326,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zxing/library@npm:^0.17.0":
-  version: 0.17.1
-  resolution: "@zxing/library@npm:0.17.1"
+"@zxing/library@npm:^0.21.3":
+  version: 0.21.3
+  resolution: "@zxing/library@npm:0.21.3"
   dependencies:
     "@zxing/text-encoding": "npm:~0.9.0"
-    ts-custom-error: "npm:^3.0.0"
+    ts-custom-error: "npm:^3.2.1"
   dependenciesMeta:
     "@zxing/text-encoding":
       optional: true
-  checksum: 10c0/fbeb9786a87c48f93e7dc2b8bdb114720cc7a3cf450c7f7c38a32e9a59521edfae54d82b4e7ec43ba0bc30f065b5be0a0fd5acd922fac2288e8a358e3a6745b9
+  checksum: 10c0/c6b33998847ad2fda0bce2f07f5b625e33e9dd98f84818ceb976b1193936b69b38ac3120418cca24b38441c711cfd21208b50851967bf8f301567e7f70197268
   languageName: node
   linkType: hard
 
@@ -20765,17 +20747,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-qr-barcode-scanner@npm:1.0.6":
-  version: 1.0.6
-  resolution: "react-qr-barcode-scanner@npm:1.0.6"
+"react-qr-barcode-scanner@npm:2.0.0":
+  version: 2.0.0
+  resolution: "react-qr-barcode-scanner@npm:2.0.0"
   dependencies:
-    "@types/react": "npm:^16.9.35"
-    "@zxing/library": "npm:^0.17.0"
-    react-webcam: "npm:^5.0.1"
+    "@types/react": "npm:^18.2.0"
+    "@zxing/library": "npm:^0.21.3"
+    react-webcam: "npm:^7.1.1"
   peerDependencies:
-    react: ^16.13.1
-    react-dom: ^16.13.1
-  checksum: 10c0/de7d766c02604c5760dad731bd52a031e138a260ec78f83986f1c11480132c45c235c9beab3b7fca21b3703da8087396e71313519d721df2c1b29b70295a894f
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/8969efc5cfd774c88d1718d48e4295b9f2c354c982ef8350d5bbc3c8f21ff91463cbf13c44d45c23759d5629b8cc6dfda0c36bf4b29959c9f2f34aeb59a1a7d0
   languageName: node
   linkType: hard
 
@@ -20844,13 +20826,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-webcam@npm:^5.0.1":
-  version: 5.2.4
-  resolution: "react-webcam@npm:5.2.4"
+"react-webcam@npm:^7.1.1":
+  version: 7.2.0
+  resolution: "react-webcam@npm:7.2.0"
   peerDependencies:
-    react: ">=15.3.0"
-    react-dom: ">=15.3.0"
-  checksum: 10c0/d99eda4859a37d00fb3b01435c96c592e980b1f8a6ddb9fc04ee676f2580df54d9ce6c02d16f0092a1277c2fc7fbe37be214ac9cb6589aeda41c1ba32d29517f
+    react: ">=16.2.0"
+    react-dom: ">=16.2.0"
+  checksum: 10c0/d639a9e4cd545f66a5ecbfdc6c38344f6ae40e6609ba5fb26db730b48723158dedeeecdecba94e4d117517f4db0be828169db270c329b9b71d847e54aba6f7f0
   languageName: node
   linkType: hard
 
@@ -23492,7 +23474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-custom-error@npm:^3.0.0":
+"ts-custom-error@npm:^3.2.1":
   version: 3.3.1
   resolution: "ts-custom-error@npm:3.3.1"
   checksum: 10c0/67cc807d03406d7eeb2b908408d455d253cc43b480d669e2e3ea028b9aaa2c78ad1b392425b86368bbbc3c43a15e4abe304312d87ed845091646ec1937bab982
@@ -24570,7 +24552,7 @@ __metadata:
     react-datepicker: "npm:7.6.0"
     react-dom: "npm:18.3.1"
     react-icons: "npm:5.4.0"
-    react-qr-barcode-scanner: "npm:1.0.6"
+    react-qr-barcode-scanner: "npm:2.0.0"
     tailwindcss: "npm:3.4.17"
     usehooks-ts: "npm:3.1.1"
   dependenciesMeta:
