@@ -2455,7 +2455,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react@npm:^0.27.0":
+"@floating-ui/react@npm:^0.27.3":
   version: 0.27.4
   resolution: "@floating-ui/react@npm:0.27.4"
   dependencies:
@@ -11582,7 +11582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:4.1.0":
+"date-fns@npm:4.1.0, date-fns@npm:^4.1.0":
   version: 4.1.0
   resolution: "date-fns@npm:4.1.0"
   checksum: 10c0/b79ff32830e6b7faa009590af6ae0fb8c3fd9ffad46d930548fbb5acf473773b4712ae887e156ba91a7b3dc30591ce0f517d69fd83bd9c38650fdc03b4e0bac8
@@ -11595,13 +11595,6 @@ __metadata:
   dependencies:
     "@babel/runtime": "npm:^7.21.0"
   checksum: 10c0/e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "date-fns@npm:3.6.0"
-  checksum: 10c0/0b5fb981590ef2f8e5a3ba6cd6d77faece0ea7f7158948f2eaae7bbb7c80a8f63ae30b01236c2923cf89bb3719c33aeb150c715ea4fe4e86e37dcf06bed42fb6
   languageName: node
   linkType: hard
 
@@ -20617,17 +20610,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-datepicker@npm:7.6.0":
-  version: 7.6.0
-  resolution: "react-datepicker@npm:7.6.0"
+"react-datepicker@npm:8.1.0":
+  version: 8.1.0
+  resolution: "react-datepicker@npm:8.1.0"
   dependencies:
-    "@floating-ui/react": "npm:^0.27.0"
+    "@floating-ui/react": "npm:^0.27.3"
     clsx: "npm:^2.1.1"
-    date-fns: "npm:^3.6.0"
+    date-fns: "npm:^4.1.0"
   peerDependencies:
     react: ^16.9.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
     react-dom: ^16.9.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
-  checksum: 10c0/4bce57a4d9fff654d516e9b33152d46e4c5c2794ef52f436155ee52702c3c76ac567d1bbc8075c169805e17e400aeb388f8f60e6e3b019e543a08be76eee3ba7
+  checksum: 10c0/c4116720488c3e22290d3d933495747e865f237a9dae4d88dcede617888e791ed1e2724dd9ee4a48aeea029ec0bc09bcb6c3ef55e88371f57cd6e9280f65f388
   languageName: node
   linkType: hard
 
@@ -24567,7 +24560,7 @@ __metadata:
     postcss-loader: "npm:8.1.1"
     prop-types: "npm:15.8.1"
     react: "npm:18.3.1"
-    react-datepicker: "npm:7.6.0"
+    react-datepicker: "npm:8.1.0"
     react-dom: "npm:18.3.1"
     react-icons: "npm:5.4.0"
     react-qr-barcode-scanner: "npm:1.0.6"
