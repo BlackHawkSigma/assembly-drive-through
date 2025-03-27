@@ -37,9 +37,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <NavLink
           className="rounded-md bg-black/10 px-4 py-1"
           activeClassName="underline"
-          to={routes.orders()}
+          to={routes.locationOrders({ id: 3 })}
         >
-          Aufträge
+          Aufträge WE
         </NavLink>
       </nav>
 
