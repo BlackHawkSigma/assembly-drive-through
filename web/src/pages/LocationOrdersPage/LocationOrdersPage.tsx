@@ -11,7 +11,9 @@ const LocationOrdersPage = ({ id }: LocationOrdersPageProps) => {
     <>
       <MetaTags title="LocationOrders" description="LocationOrders page" />
 
-      {typeof id === 'number' ? <OrdersByPickuplocationCell id={id} /> : null}
+      <div className="mx-3">
+        {typeof id === 'number' ? <OrdersByPickuplocationCell id={id} /> : null}
+      </div>
     </>
   )
 }
